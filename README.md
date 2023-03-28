@@ -5,7 +5,7 @@ In this lesson, we'll read through the two most popular data modeling strategies
 
 ## Objectives
 - Learn differences between two schema
-- Lean when to use each one
+- Learn when to use each one
 
 ### What is star schema?
 A star schema is a database schema used to store data in a star format when viewed from ERD (entity relationship diagram). This schema consists of a central table, called "fact table", and a number of entities, or tables, connected to the "fact table". The other tables around "fact table" are called "dimension tables". 
@@ -33,7 +33,9 @@ Some questions that can be answered from `REVENUE` table are
 
 Imagine answering these questions without `REVENUE` table - you will be joining all 3 tables, every time you want to answer a question. So now it's easy to see why a business would want fact tables pre-formulated, and just do a simple `SELECT` query to pull important KPIs.
 
-Now, let's take a look at some fields. `COUNTRY_CODE` in `BRANCH` and `DEALER` tables are coded, which means if we want to know the exact name of country, we'll have to search for another table. Same goes with `COLOR_ID` in `MODEL` table. Now, to make data more normalized, we expand this ERD into snowflake schema like below:
+Now, let's take a look at some fields. `COUNTRY_CODE` in `BRANCH` and `DEALER` tables are coded, which means if we want to know the exact name of country, we'll have to search for another table. Same goes with `COLOR_ID` in `MODEL` table.
+
+Now, to make data more normalized, we expand this ERD into snowflake schema like below:
 
 ![snowflake_schema)](images/snowflake_schema.png)
 
