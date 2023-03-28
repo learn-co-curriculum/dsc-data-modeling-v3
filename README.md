@@ -33,7 +33,7 @@ Some questions that can be answered from `REVENUE` table are
 
 Imagine answering these questions without `REVENUE` table - you will be joining all 3 tables, every time you want to answer a question. So now it's easy to see why a business would want fact tables pre-formulated, and just do a simple `SELECT` query to pull important KPIs.
 
-Now, let's take a look at some fields. `COUNTRY_CODE` in `BRANCH` and `DEALER` tables are coded, which means if we want to know the exact name of country, we'll have to search for another table. Same goes with `COLOR_ID` in `MODEL` table.
+Now, let's take a look at some fields. `COUNTRY_CODE` in `BRANCH` and `DEALER` tables are coded, which means if we want to know the exact name of country, we'll have to search for another table. Same goes with `COLOR_ID` in `MODEL` table. These data would be further normalized to reduce data redundancy.
 
 Now, to make data more normalized, we expand this ERD into snowflake schema like below:
 
